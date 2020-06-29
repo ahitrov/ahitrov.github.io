@@ -25,9 +25,7 @@
         reader.onload = (_) => {
             const tabOnMobileDevice = window.open('', '_blank') || undefined;
 
-            alert("iOS CHrome " + tabOnMobileDevice);
             if (tabOnMobileDevice) {
-                alert("iOS CHrome " + reader.result);
                 tabOnMobileDevice.location.href = reader.result;
 
             }
@@ -37,7 +35,6 @@
         
         // Samsung
         const tabOnMobileDevice2 = window.open('', '_blank') || undefined;
-        alert("Samsung " + tabOnMobileDevice2);
         if (tabOnMobileDevice2) {
 
             tabOnMobileDevice2.document.write(samsung);
@@ -47,7 +44,6 @@
         // Chrome
 
         const containerURL = window.URL.createObjectURL(blobChrome);
-        alert("Pure Chrome " + containerURL);
         const tabOnMobileDevice3 = window.open(containerURL, '_blank') || undefined;
     }
 </script>
