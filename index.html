@@ -1,32 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blob URL test</title>
+</head>
+
 <body>
-<script src="https://staging-web-chat.nativechat.com/2.7.2/sdk/nativechat.js"></script>
-    <link href="https://staging-web-chat.nativechat.com/2.7.2/sdk/nativechat.css" rel="stylesheet" type="text/css">
-    <script>
-  var chatSettings = {
-    bot: {
-      id: "ed8e71f669254c11ae8c0841"
-    },
-    channel: {
-      id: "4af54b60-f241-472b-80aa-f260f40c2669",
-      token: "dfe2589e-55aa-458d-a205-e64f2fe17299"
-    },
-    googleApiKey: "your-google-maps-API-key",
-    session: {
-      clear: true
-    },
-    chatServerInstance: "staging-"
-  };
-
-  window.NativeChat.load({
-    id: "kcChatWindow",
-    origin: "",
-    display: {
-        mode: "modal"
-    },
-    chat: chatSettings
-  });
-</script>
-
+    <button onclick="openBlob()">open blob</button>
 </body>
-</html>
+
+<script>
+    function openBlob() {
+        const pureChrome="<html><head><title>Pure Chrome</title></head><body><span>Hi Pure Chrome</span></body>";
+        const iosChrome="<html><head><title>iOS Chrome</title></head><body><span>Hi iOS Chrome</span></body>";
+        const samsung="<html><head><title>Samsung Mobie</title></head><body><span>Hi Samsung</span></body>";
+
+        const blobChrome = new Blob([pureChrome], { type: 'text/html' });
+        const blobChromeIos = new Blob([iosChrome], { type: 'text/html' });
+        // const blobSamsung = new Blob([samsung], { type: 'text/html' });
+
+        /// iOS Chrome
+        const reader = new FileReader();
+
+        reader.onload = (_) => {
+            const tabOnMobileDevice = window.open('', '_blank') || undefined;
+
+            alert("iOS CHrome " + tabOnMobileDevice);
+            if (tabOnMobileDevice) {
+                alert("iOS CHrome " + reader.result);
+                tabOnMobileDevice.location.href = reader.result;
+
+            }
+        };
+
+        reader.readAsDataURL(blobChromeIos);
+        
+        // Samsung
+        const tabOnMobileDevice2 = window.open('', '_blank') || undefined;
+        alert("Samsung " + tabOnMobileDevice2);
+        if (tabOnMobileDevice2) {
+
+            tabOnMobileDevice2.document.write(samsung);
+
+        }
+
+        // Chrome
+
+        const containerURL = window.URL.createObjectURL(blobChrome);
+        alert("Pure Chrome " + containerURL);
+        const tabOnMobileDevice3 = window.open(containerURL, '_blank') || undefined;
+    }
+</script>
