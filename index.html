@@ -35,41 +35,4 @@
 </script>
 </body>
 
-<script>
-    function openBlob() {
-        const pureChrome="<html><head><title>Pure Chrome</title></head><body><span>Hi Pure Chrome</span></body>";
-        const iosChrome="<html><head><title>iOS Chrome</title></head><body><span>Hi iOS Chrome</span></body>";
-        const samsung="<html><head><title>Samsung Mobie</title></head><body><span>Hi Samsung</span></body>";
 
-        const blobChrome = new Blob([pureChrome], { type: 'text/html' });
-        const blobChromeIos = new Blob([iosChrome], { type: 'text/html' });
-        // const blobSamsung = new Blob([samsung], { type: 'text/html' });
-
-        /// iOS Chrome
-        const reader = new FileReader();
-
-        reader.onload = (_) => {
-            const tabOnMobileDevice = window.open('', '_blank') || undefined;
-
-            if (tabOnMobileDevice) {
-                tabOnMobileDevice.location.href = reader.result;
-
-            }
-        };
-
-        reader.readAsDataURL(blobChromeIos);
-        
-        // Samsung
-        const tabOnMobileDevice2 = window.open('', '_blank') || undefined;
-        if (tabOnMobileDevice2) {
-
-            tabOnMobileDevice2.document.write(samsung);
-
-        }
-
-        // Chrome
-
-        const containerURL = window.URL.createObjectURL(blobChrome);
-        const tabOnMobileDevice3 = window.open(containerURL, '_blank') || undefined;
-    }
-</script>
