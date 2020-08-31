@@ -11,6 +11,7 @@
   const url = new URL(location.href);
   const searchParams = new URLSearchParams(url.search);
   const zendeskSay=searchParams.get('zendeskSay');
+  const zendeskNotes=searchParams.get('zendeskNotes');
   const zendeskKey=searchParams.get('zendeskKey');
   const zendeskLocal=searchParams.get('zendeskLocal');
   const zendeskVisitorName=searchParams.get('zendeskVisitorName');
@@ -24,6 +25,7 @@
         $zopim.livechat.setLanguage(zendeskLocal);
         $zopim.livechat.setName(zendeskVisitorName);
         $zopim.livechat.setEmail(zendeskVisitorEmail);
+        $zopim.livechat.appendNotes(zendeskNotes);
         $zopim.livechat.say(zendeskSay);
     });
   });
