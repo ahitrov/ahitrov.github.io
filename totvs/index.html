@@ -35,6 +35,15 @@
     },    
     chat: chatSettings
   });
+   
+  // open automatically
+  window.onload = function() {
+	setTimeout(function () {
+		var chatLauncher = document.getElementById("nativechat-launcher-kcChatWindow");
+		var openElement = chatLauncher.getElementsByClassName("nativechat-launcher-icon-open");
+		openElement[0].click();
+	}, 500)
+  };
 </script>
 
 </body>
