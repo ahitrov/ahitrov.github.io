@@ -3,36 +3,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <script src="https://web-chat.nativechat.com/2.19.0/sdk/nativechat.js"></script>
-    <link href="https://web-chat.nativechat.com/2.19.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <script src="https://staging-web-chat.nativechat.com/3.0.1/sdk/nativechat.js"></script>
+    <link href="https://staging-web-chat.nativechat.com/3.0.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
     <script>
+  
   var chatSettings = {
     bot: {
-      id: "e6828a9e4d574748b0efb106"
+      id: "d5883b2ca9d04de29a0a017c"
     },
     channel: {
-      id: "0e88970b-c2d7-4bd3-acb6-d813b84948bf",
-      token: "9822e7f5-8c00-41e9-9436-87063c22abea"
+      id: "75e6b08a-df0e-4681-904f-6a1c9f662479",
+      token: "fc312958-b59f-4836-afb9-1a8eb1cbdeb4"
     },
     googleApiKey: "your-google-maps-API-key",
     session: {
       clear: true
-    }
+    },
+    chatServerInstance: "staging-"
   };
 
-  const load = () => {
-      window.NativeChat.load({
-      id: "kcChatWindow",
-      origin: "",
-      display: {
-        mode: "inline",
-        containerId: "ID-of-the-element-that-contains-the-chat-widget"
-      },
-      chat: chatSettings
-    });
-  };
-  window.onload = load;
+  window.NativeChat.load({
+    id: "kcChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
+    },
+    chat: chatSettings
+  });
+
 </script>
 </body>
 </html>
