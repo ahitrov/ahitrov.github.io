@@ -13,7 +13,19 @@
     },
     googleApiKey: "your-google-maps-API-key",
     session: {
-      clear: true
+      clear: true,
+      context: {
+        _promptLowConfidenceConversationTriggerSuggestionsKey: true,
+        _prompSuggestionsOutsideConversation: true,
+        _ignoreCategoriesKey: [ "SmallTalk" ],
+        _searchConfig: {
+          provider: "google",
+          config: {
+            key: "AIzaSyAUEmLS6_psWa1Txh46ZbeRSz_RQarz_WM",
+            cx: "009678235776096006611:9tfw6athufk"
+          }
+        }
+      }
     },
     chatServerInstance: "staging-",
     apiVersion: "pr386",
