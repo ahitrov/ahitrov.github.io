@@ -1,5 +1,24 @@
 <html>
   <body>
+    
+    <p>
+      Inspect the source of this page and modify:
+      <ul>
+        <i>bot.id</i>
+        <i>channel.id</i>
+        <i>channel.token</i>
+      </ul>
+      to test against your own bot on https://staging-bots.nativechat.com
+    
+      Modify <b>orTerms</b> to fine tune the search.
+      </br>
+      Or you can remove <b>_searchConfig</b> and test low confidence suggestions outside of a conversation:
+https://docs.nativechat.com/docs/1.0/cognitive-flow/settings.html#low-confidence-suggestions
+      </br>
+      Here you can play with: _promptLowConfidenceConversationTriggerSuggestionsKey, _prompSuggestionsOutsideConversation, _ignoreCategoriesKey
+    </p>
+    
+    
     <script src="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.js"></script>
     <link href="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <script>
@@ -22,7 +41,8 @@
           provider: "google",
           config: {
             key: "AIzaSyAUEmLS6_psWa1Txh46ZbeRSz_RQarz_WM",
-            cx: "009678235776096006611:9tfw6athufk"
+            cx: "009678235776096006611:9tfw6athufk",
+            orTerms: "Sitefinity"
           }
         }
       }
