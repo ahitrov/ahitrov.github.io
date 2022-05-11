@@ -13,7 +13,13 @@
       </br>
       Modify <b>orTerms</b> to fine tune the search.
       </br>
+<h4>Known issues:</h4>
+<ul>
+  <li>Search is never offered if inside conversation on a step with a <b>Text</b> entity slot</li>
+        <li>Search prompt response (Do you want me to search - <b>Yes</b>/<b>No</b>) logged in Daily digest</li>
+      </ul>
       </br>
+
       <h2>Low confidence options</h2>
       Or you can remove <b>_searchConfig</b> and test low confidence suggestions outside of a conversation:
 https://docs.nativechat.com/docs/1.0/cognitive-flow/settings.html#low-confidence-suggestions
@@ -21,11 +27,7 @@ https://docs.nativechat.com/docs/1.0/cognitive-flow/settings.html#low-confidence
       </br>
 Here you can play with: <b>_promptLowConfidenceConversationTriggerSuggestionsKey</b>, <b>_prompSuggestionsOutsideConversation</b>, <b>_ignoreCategoriesKey</b>
 
-<h4>Known issues:</h4>
-<ul>
-  <li>Search is never offered if inside conversation on a step with a <b>Text</b> entity slot</li>
-        <li>Search prompt response (Do you want me to search - <b>Yes</b>/<b>No</b>) logged in Daily digest</li>
-      </ul>
+
     </p>
     
     
