@@ -21,11 +21,11 @@
       </br>
 
       <h2>Low confidence options</h2>
-      Or you can remove <b>_searchConfig</b> and test low confidence suggestions outside of a conversation:
+      Or you can remove <b>searchConfig</b> and test low confidence suggestions outside of a conversation:
 https://docs.nativechat.com/docs/1.0/cognitive-flow/settings.html#low-confidence-suggestions
       </br>
       </br>
-Here you can play with: <b>_promptLowConfidenceConversationTriggerSuggestionsKey</b>, <b>_prompSuggestionsOutsideConversation</b>, <b>_ignoreCategoriesKey</b>
+Here you can play with: <b>promptLowConfidenceConversationTriggerSuggestionsKey</b>, <b>prompSuggestionsOutsideConversation</b>, <b>ignoreCategoriesKey</b>
 
 
     </p>
@@ -46,10 +46,11 @@ Here you can play with: <b>_promptLowConfidenceConversationTriggerSuggestionsKey
     session: {
       clear: true,
       context: {
-        _promptLowConfidenceConversationTriggerSuggestionsKey: true,
-        _prompSuggestionsOutsideConversation: true,
-        _ignoreCategoriesKey: [ "SmallTalk" ],
-        _searchConfig: {
+        promptLowConfidenceConversationTriggerSuggestionsKey: true,
+        prompSuggestionsOutsideConversation: true,
+        ignoreCategoriesKey: [ "SmallTalk" ],
+        maxNumberOfHits: 5,
+        searchConfig: {
           provider: "google",
           config: {
             key: "AIzaSyAUEmLS6_psWa1Txh46ZbeRSz_RQarz_WM",
