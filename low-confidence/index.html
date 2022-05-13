@@ -1,0 +1,39 @@
+<html>
+  <body>
+    
+    
+    <script src="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.js"></script>
+    <link href="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <script>
+  var chatSettings = {
+    bot: {
+      id: "cc683ff49a32481ea6c03e3f"
+    },
+    channel: {
+      id: "5b6bd5e9-c750-48f8-aaf7-2e4ee22edf73",
+      token: "35ef6b8d-e363-430b-9cee-23d2df6cede4"
+    },
+    googleApiKey: "your-google-maps-API-key",
+    session: {
+      clear: true,
+      context: {
+        promptLowConfidenceConversationTriggerSuggestionsKey: true,
+        prompSuggestionsOutsideConversation: true,
+        ignoreCategoriesKey: [ "SmallTalk" ]
+      }
+    },
+    chatServerInstance: "staging-",
+    apiVersion: "pr386",
+  };
+
+  window.NativeChat.load({
+    id: "kcChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
+    },
+    chat: chatSettings
+  });
+</script>
+  </body>
+</html>
