@@ -1,37 +1,21 @@
 <html>
   <body> 
     
-    <script src="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.js"></script>
-    <link href="https://staging-web-chat.nativechat.com/3.1.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <script src="https://web-chat.nativechat.com/3.2.0/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/3.2.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <script>
   var chatSettings = {
     bot: {
-      id: "abbe9abda02e44c4806ebd29"
+      id: "7a9d666462ee47e6b4bcb91a"
     },
     channel: {
-      id: "03497185-6693-4d8a-ad75-0cd641288cc1",
-      token: "8a8cf8f7-5e34-4c33-915f-92a058f33c9a"
+      id: "9fdded6d-c49e-4042-be2d-ac2e5ff48832",
+      token: "885c7c0a-eb9f-4410-b4c0-66eaec0c0c29"
     },
     googleApiKey: "your-google-maps-API-key",
     session: {
-      clear: true,
-      context: {
-        promptLowConfidenceConversationTriggerSuggestionsKey: true,
-        prompSuggestionsOutsideConversation: true,
-        ignoreCategoriesKey: [ "SmallTalk" ],
-        maxNumberOfHits: 5,
-        searchConfig: {
-          provider: "google",
-          config: {
-            key: "AIzaSyAUEmLS6_psWa1Txh46ZbeRSz_RQarz_WM",
-            cx: "009678235776096006611:9tfw6athufk",
-            orTerms: "Sitefinity"
-          }
-        }
-      }
-    },
-    chatServerInstance: "staging-",
-    apiVersion: "pr386",
+      clear: true
+    }
   };
 
   window.NativeChat.load({
