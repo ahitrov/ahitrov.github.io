@@ -5,27 +5,24 @@
 </head>
 
 <body>
-<script src="https://web-chat.nativechat.com/2.19.0/sdk/nativechat.js"></script>
-    <link href="https://web-chat.nativechat.com/2.19.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+<script src="https://staging-web-chat.nativechat.com/3.3.2/sdk/nativechat.js"></script>
+    <link href="https://staging-web-chat.nativechat.com/3.3.2/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <script>
   var chatSettings = {
     bot: {
-      id: "c20f3ce6854844a79af63557"
+      id: "f13d85ed4f1443308f3ac4cf"
     },
     channel: {
-      id: "783b56f4-2b72-41f2-834a-ea169d37d07d",
-      token: "0126ab58-f4d5-44a5-b8ee-bd73bb76197b"
+      id: "bac3087a-a268-463b-8ef6-e61c31734a5a",
+      token: "73f0152e-28c4-4a2c-bd07-cbfa328a29cc"
     },
     googleApiKey: "your-google-maps-API-key",
     session: {
       clear: true
-    }
-     ,
-     //css: [
-     //     "https://raw.githubusercontent.com/ahitrov/ahitrov.github.io/master/custom-theme.css"
-     //]
+    },
+    chatServerInstance: "staging-"
   };
-
+        
   window.NativeChat.load({
     id: "kcChatWindow",
     origin: "",
