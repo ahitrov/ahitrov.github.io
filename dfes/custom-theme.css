@@ -1,0 +1,23 @@
+.profile-data {
+  display: flex;
+}
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.birthday-icon {
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.image-cropper .birthday-icon {
+  position: absolute;
+  top:0;
+  right:0;
+}
