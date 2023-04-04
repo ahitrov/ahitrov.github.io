@@ -1,0 +1,40 @@
+<html>
+  
+  <body>
+  <script src="https://web-chat.nativechat.com/3.5.0/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/3.5.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+  var chatSettings = {
+    bot: {
+      id: "f587bdc2893c44a2b9890b5e"
+    },
+    channel: {
+      id: "396b261d-dc97-4f4d-882c-9352b360c9fb",
+      token: "26cf7567-acbd-4797-86d9-f1178a1df26a"
+    },
+    googleApiKey: "your-google-maps-API-key",
+    session: {
+      clear: true,
+      context: {
+        userId: 1
+      },
+    },
+    css: [
+      "https://web-chat.nativechat.com/3.5.0/client/default-theme/all.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "https://ahitrov.github.io/dfes/custom-theme.css"
+    ]
+  };
+
+  window.NativeChat.load({
+    id: "kcChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
+    },
+    chat: chatSettings
+  });
+</script>
+  </body>
+</html>
