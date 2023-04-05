@@ -26,7 +26,7 @@
   display: none;
 }
 
-.k-quick-reply .dfes-link {
+.k-quick-reply.dfes-link {
   text-decoration: none;
   background-color: white;
   border-radius: 0.5rem;
