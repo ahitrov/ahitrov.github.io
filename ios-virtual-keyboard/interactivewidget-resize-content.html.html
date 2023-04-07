@@ -15,11 +15,11 @@
             
             function resizeHandler() {
                  
-                
+                document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
                 document.getElementById("testId")[0].style.height = window.visualViewport.height.toString() + 'px';
                 
-                document.getElementsByTagName('body')[0].style.height= window.visualViewport.height.toString() + 'px';
-                document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
+               // document.getElementsByTagName('body')[0].style.height= window.visualViewport.height.toString() + 'px';
+                
             }
 
             window.visualViewport.addEventListener('resize', resizeHandler);
