@@ -1,0 +1,55 @@
+<html>
+    <head>
+      <title>NativeChat - Test with Chrome dev tools Nexus 5 with keyboard</title>
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, interactive-widget=resizes-content">
+      <script src="https://staging-web-chat.nativechat.com/3.7.1/sdk/nativechat.js"></script>
+  <link href="https://staging-web-chat.nativechat.com/3.7.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
+      <style>
+      html, body { height: 100%; }
+      body { margin: 0; padding: 0; height: 100%; }
+      #native-chat-container { width: 100%; height: 100%; }
+      #native-chat-container iframe { width: 100%; height: 100%; border: none; }
+      </style>
+    </head>
+    <body>
+      <div id="native-chat-container"></div>
+    </body>
+    <script>
+        if (window.visualViewport) {
+            
+            function resizeHandler() {
+                
+                for (const testElement of document.getElementById("native-chat-container")) {
+                    testElement.style.height = window.visualViewport.height.toString() + 'px';
+                    document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
+                }
+            }
+
+            window.visualViewport.addEventListener('resize', resizeHandler);
+        }
+      var chatSettings = {
+    bot: {
+      id: "f13d85ed4f1443308f3ac4cf"
+    },
+    channel: {
+      id: "bac3087a-a268-463b-8ef6-e61c31734a5a",
+      token: "73f0152e-28c4-4a2c-bd07-cbfa328a29cc"
+    },
+    googleApiKey: "you api key here",
+    session: {
+      clear: true,
+    },
+    chatServerInstance: "staging-",
+    showDebugConsole: true,
+  };
+  window.NativeChat.load({
+        id: 'portal',
+        origin: '*',
+        display: {
+          mode: "inline",
+          containerId: "native-chat-container"
+        },
+        chat: chatSettings
+      });
+    </script>
+  </html>
