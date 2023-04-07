@@ -16,9 +16,10 @@
             function resizeHandler() {
                  //for (const sessionView of document.getElementsById('testId')) {
                     // sessionView.style.height = window.visualViewport.height.toString() + 'px';
-                     document.getElementById("testId").style.height = window.visualViewport.height.toString() + 'px';
+                     
                      document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
-                     document.getElementsByTagName('body')[0].style.height= window.visualViewport.height.toString() + 'px';
+                     //document.getElementsByTagName('body')[0].style.height= window.visualViewport.height.toString() + 'px';
+                     document.getElementById("testId").style.height = window.visualViewport.height.toString() + 'px';
                   //}
                 //
                 //
@@ -31,7 +32,7 @@
         }
     </script>
   <div id="testId">
-    <div>This should be visible 9</div>
+    <div>This should be visible 10</div>
     <input id="child" type="text">
   </div>
 </body>
