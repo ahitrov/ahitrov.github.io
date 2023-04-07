@@ -14,8 +14,9 @@
         if (window.visualViewport) {
             
             function resizeHandler() {
-                document.getElementsByTagName('body')[0].style.height = window.visualViewport.height.toString() + 'px';
+                 
                 document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
+                document.getElementsByTagName('body')[0].style.height= window.visualViewport.height.toString() + 'px';
                 document.getElementById("testId")[0].style.height = window.visualViewport.height.toString() + 'px';
             }
 
