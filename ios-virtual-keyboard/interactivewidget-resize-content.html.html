@@ -10,6 +10,18 @@
       </style>
   </head>
 <body>
+    <script>
+        if (window.visualViewport) {
+            function resizeHandler() {
+                for (const testElement of document.getElementById(testId)) {
+                    testElement.style.height = window.visualViewport.height.toString() + 'px';
+                    document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
+                }
+            }
+
+            window.visualViewport.addEventListener('resize', resizeHandler);
+        }
+    </script>
   <div id="testId">
     <div>This should be visible</div>
     <input id="testId" type="text">
