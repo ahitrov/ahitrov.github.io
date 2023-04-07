@@ -12,9 +12,9 @@
 <body>
     <script>
         if (window.visualViewport) {
-            alert("visualViewport exists!");
+            
             function resizeHandler() {
-                alert("visualViewport resize!");
+                
                 for (const testElement of document.getElementById(testId)) {
                     testElement.style.height = window.visualViewport.height.toString() + 'px';
                     document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
