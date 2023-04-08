@@ -21,7 +21,9 @@
                 
                 const testElement = document.getElementById("native-chat-container");
                    // testElement.style.height = window.visualViewport.height.toString() + 'px';
-                  setTimeout(100, function () {  document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';});
+                  setTimeout(function () {  
+                      document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';}
+                      , 100);
  
 
             }
