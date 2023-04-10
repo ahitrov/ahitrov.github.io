@@ -1,7 +1,7 @@
 <html>
     <head>
       <title>NativeChat - Test with Chrome dev tools Nexus 5 with keyboard</title>
-      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, interactive-widget=resizes-visual">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, interactive-widget=resizes-content">
       <script src="https://staging-web-chat.nativechat.com/3.7.1/sdk/nativechat.js"></script>
   <link href="https://staging-web-chat.nativechat.com/3.7.1/sdk/nativechat.css" rel="stylesheet" type="text/css">
       <style>
@@ -18,10 +18,10 @@
         if (window.visualViewport) {
             
             function resizeHandler() {
-                const testElement = document.getElementById("native-chat-container");
-                testElement.style.height = window.visualViewport.height.toString() + 'px';
-                document.getElementsByTagName('iframe')[0].style.height = window.visualViewport.height.toString() + 'px';
-                document.getElementsByTagName('body')[0].style.height = window.visualViewport.height.toString() + 'px';
+                //const testElement = document.getElementById("native-chat-container");
+                //testElement.style.height = window.visualViewport.height.toString() + 'px';
+                //document.getElementsByTagName('iframe')[0].style.height = window.visualViewport.height.toString() + 'px';
+                //document.getElementsByTagName('body')[0].style.height = window.visualViewport.height.toString() + 'px';
                 document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
                 
                 window.scrollTo(0,0);
