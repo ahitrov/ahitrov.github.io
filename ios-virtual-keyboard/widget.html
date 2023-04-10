@@ -22,9 +22,10 @@
                 //testElement.style.height = window.visualViewport.height.toString() + 'px';
                 //document.getElementsByTagName('iframe')[0].style.height = window.visualViewport.height.toString() + 'px';
                 //document.getElementsByTagName('body')[0].style.height = window.visualViewport.height.toString() + 'px';
+                document.getElementsByTagName('html')[1].style.height = window.visualViewport.height.toString() + 'px';
                 document.getElementsByTagName('html')[0].style.height = window.visualViewport.height.toString() + 'px';
                 
-                window.scrollTo(0,0);
+                // window.scrollTo(0,0);
             }
 
             window.visualViewport.addEventListener('resize', resizeHandler);
@@ -40,7 +41,7 @@
     googleApiKey: "you api key here",
     session: {
       clear: true,
-      userMessage: "hi there 6",
+      userMessage: "hi there 7",
     },
     chatServerInstance: "staging-",
     showDebugConsole: true,
